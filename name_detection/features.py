@@ -124,9 +124,7 @@ def filter_candidates(car):
     if len(car.split()) < 2:
         return False
     first_token = car.split()[0].lower()
-    print u"Filtering",  first_token
     if first_token in car_brands:
-        print "Found brand"
         return True
     return False
 

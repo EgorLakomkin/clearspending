@@ -84,7 +84,3 @@ def train_model():
     print("CoNLL F1: %.3f" % (100 * bio_f_score(y_test, y_pred)))
     return clf
 
-if __name__ == "__main__":
-    clf = train_model()
-    found_cars = predict_cars(clf, u"Автомобиль марки Я ХЗ ЧТО непонятно Toyota Gustavo GT 100 лошадиных сил")
-    print found_cars
