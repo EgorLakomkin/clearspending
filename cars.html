@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    
+    
+<script id="entry-template" type="text/x-handlebars-template">
+    <div class="car_result">
+        <div id="image">
+            <img id="car_img" src="{{car_picture}}">
+        </div>
+        <div id="info">
+            
+            <span id="car_name">{{car_name}}</span><br />
+            <span id="contract_size">{{contract_price}}</span><br />
+            <span id="customer">{{contract_customer}}</span><br />
+            <a id="cs_url" href="{{contract_url}}">Контракт на ГосЗатратах</a><br />
+        </div>
+        
+        
+    </div>
+    
+</script>
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" media="screen" />
+ </head>
+ 
+ 
+ 
+ <body>
+    <div id="results">
+        
+    </div>
+    
+ 
+ </body>
+ 
+ <script type="text/javascript" language="javascript" src="cars.json"></script> 
+ <script src="./javascripts/jquery-1.11.0.min.js"></script>
+ <script src="./javascripts/handlebars-v1.3.0.js"></script>
+ 
+ <script type="text/javascript">
+       $(document).ready(function(e) {
+            var source   = $("#entry-template").html();
+            var template = Handlebars.compile(source);
+            for(i=0;i< jsonObject.length; i++)
+            {
+                var context = jsonObject[i];
+                var html    = template(context);
+                $('#results').append( html + "<hr />");
+            }
+       });
+    </script>

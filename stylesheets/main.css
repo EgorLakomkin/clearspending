@@ -1,0 +1,43 @@
+
+
+
+#results
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#contract_size
+{
+    color: red;
+    font-size:3em;
+}
+
+.car_result
+{
+    overflow: hidden;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#image{
+    display: inline-block;
+    float:left;
+}
+
+#info{
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+#car_img{
+    width: 300px;
+    height: auto;
+}
+
+#customer { 
+    display:block;
+    width:300px;
+    word-wrap:break-word;
+}
